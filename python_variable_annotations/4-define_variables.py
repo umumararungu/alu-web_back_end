@@ -7,7 +7,7 @@ pi = 3.14,
 i_understand_annotations = True,
 school = "Holberton"
 
-def define_variable(a: int, pi: float, i_understand_annotations: bool, school: str):
+def define_variable(a: int = 1, pi: float, i_understand_annotations: bool, school: str):
     'Return default value'
 
     a = a
