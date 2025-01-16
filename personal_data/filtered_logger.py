@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """ Personal data
 """
@@ -6,7 +5,7 @@
 import logging
 import os
 import re
-import mysql.connector # type: ignore
+import mysql.connector  # type: ignore
 from typing import List
 
 
