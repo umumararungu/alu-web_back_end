@@ -8,7 +8,7 @@ from typing import Dict, List, Tuple, Any
 
 
 class Server:
-    """Server class to paginate a database of popular baby names.
+    """Server class 
     """
     DATA_FILE = "Popular_Baby_Names.csv"
 
@@ -16,7 +16,7 @@ class Server:
         self.__dataset = None
 
     def dataset(self) -> List[List]:
-        """Cached dataset
+        """Cached dataset function
         """
         if self.__dataset is None:
             with open(self.DATA_FILE) as f:
@@ -26,7 +26,7 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10):
-        """ Finds the correct indexes to paginate dataset.
+        """ Finds the correct indexes to paginate dataset.(function)
         """
         assert page > 0
         assert page_size > 0
@@ -38,7 +38,7 @@ class Server:
 
     def get_hyper(self, page: int = 1,
                   page_size: int = 10) -> Dict[str, Any]:
-        """ Returns a dictionary.
+        """ Returns a dictionary.(function)
         """
         total_pages = math.ceil(len(self.dataset()) / page_size)
         return {
@@ -52,6 +52,6 @@ class Server:
 
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
-    """ Returns a tuple containing a start and end index.
+    """ Returns a tuple containing a start and end index.(function)
     """
     return ((page - 1) * page_size, page * page_size)
