@@ -8,7 +8,7 @@ from typing import Dict, List, Tuple, Any
 
 
 class Server:
-    """Server class 
+    """Server class
     """
     DATA_FILE = "Popular_Baby_Names.csv"
 
