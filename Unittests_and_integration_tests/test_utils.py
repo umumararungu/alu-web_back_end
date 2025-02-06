@@ -67,5 +67,6 @@ class TestMemoize(unittest.TestCase):
             test_class.a_property
             mockMethod.assert_called_once
 
+
 if __name__ == '__main__':
     unittest.main()
