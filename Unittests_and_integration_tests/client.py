@@ -56,3 +56,17 @@ class GithubOrgClient:
         except KeyError:
             return False
         return has_license
+
+
+
+import requests
+
+def authenticate(username, password):
+    try:
+        response = requests.get("https://api.example.com/data", auth=(username, password))
+        response.raise_for_status()  # This will raise an error for 4xx and 5xx responses
+        return response.json()
+    except requests.exceptions.HTTPError as http_err:
+        return f"Authentication failed: {http_err}, Status code: {response.status_code}"
+    except Exception as err:
+        return f"An error occurred: {err}"
