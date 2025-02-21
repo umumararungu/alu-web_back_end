@@ -59,7 +59,7 @@ class GithubOrgClient:
 
 
 
-import requests
+import requests # type: ignore
 
 def authenticate(username, password):
     try:
